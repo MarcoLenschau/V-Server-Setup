@@ -99,24 +99,18 @@ sudo apt install git nginx -y
 
 ### 3. Create new webspace directory
 
-
 ```
 sudo mkdir /var/www/alternatives
 ```
 
-### 4. Create new Nginx Configure File
+### 4. Create and Open new Nginx Configure File
 
 ```
 sudo touch /etc/nginx/sites-enabled/<your-config-name>
-```
-
-### 5. Open Nginx Configure File
-
-```
 sudo nano /etc/nginx/sites-enabled/<your-config-name>
 ```
 
-### 6. Add Nginx Configuration
+### 5. Add Nginx Configuration
 
 ```
 server {
@@ -130,6 +124,12 @@ server {
             try_files $uri $uri/ =404;
     }
 }
+```
+
+### 6. Test NGINX Config 
+
+```
+sudo /usr/sbin/nginx -t
 ```
 
 ### 7. Create and open new index.html file 
