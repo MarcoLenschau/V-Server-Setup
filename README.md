@@ -1,17 +1,6 @@
 # V-Server Setup
 
-<!--INSERT YOUR BRIEF DESCRIPTION HERE -->
 This page documents how I configured my very first cloud server instance in the Developer Akademie DevSecOps Course.
-
-
-
-import GithubLinkAdmonition from '@site/src/components/GithubLinkAdmonition';
-
-<GithubLinkAdmonition 
-    link="https://github.com/MarcoLenschau/V-Server-Setup"
-    title="Github" 
-    type="tip"
-/>
 
 ## 🔐 SSH Key Authentication
 This guide explains how to securely access a remote V-Server using SSH keys, disable password login, and block root login for improved server security.
