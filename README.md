@@ -115,7 +115,7 @@ sudo nano /etc/nginx/sites-enabled/<your-config-name>
 ```
 server {
     listen 8081;
-    listen [::]8081;
+    listen [::]:8081;
     
     root /var/www/alternatives;
     index index.html index.htm index.nginx-debian.html;
