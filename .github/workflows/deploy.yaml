@@ -1,0 +1,25 @@
+name: Deploy via SSH
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Copy files via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: marco-lenschau.de
+          username: github
+          key: ${{ secrets.SECRET_KEY }}
+          port: 22
+          source: "./"
+          target: "/var/www/html/docs/"
+          
